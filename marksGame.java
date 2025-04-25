@@ -13,14 +13,17 @@ public class numberGame {
         if (choice == 1) {
 
             int total = 0; 
-            System.out.println("Now start entering the value Between 0-100");
+            System.out.println("Now start entering the values Between 0-90");
+            System.out.println("You can stop this program by pressing '0' at any stage.");
 
          while (true) {
 
             int input = sc.nextInt();
 
+            total = total + input;
+
             if ( input == 0){
-            System.out.println("You quite this");
+            System.out.println("Here is your RESULT!");
 
             break;
             } 
@@ -32,8 +35,6 @@ public class numberGame {
             continue;
             }
 
-            total = total + input;
-
             if (total >= 90 ){
 
             System.out.println("You are exceding the value");
@@ -41,18 +42,20 @@ public class numberGame {
             break;
             }
 
-            System.out.println("Total score : " + total + "out of 100");
+            
 
           } 
+
+          System.out.println("Your Total score is : " + total + " / 100");
           
           if (total == 90){
-            System.out.println("You are amazing");
+            System.out.println("Remarks! You are amazing");
           }
-          else if (total <= 89 || total >= 50){
-            System.out.println("You are good");
+          else if (total <= 89 && total >= 50){
+            System.out.println("Remarks! You are good");
           }
           if (total <= 49){
-            System.out.println("You need to work on your self");
+            System.out.println("Remarks! You need to work on your self");
           }
           
 
@@ -69,3 +72,24 @@ public class numberGame {
     }
 
 }
+
+
+/*
+
+OUTPUT:
+
+Enter your value;
+1
+Now start entering the values Between 0-90
+You can stop this program by pressing '0' at any stage.
+10
+5
+11
+41
+0
+Here is your RESULT!
+Your Total score is : 67 / 100
+Remarks! You are good
+ 
+ 
+*/
