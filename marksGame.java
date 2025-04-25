@@ -1,3 +1,12 @@
+/*
+
+This is a Java-based program where the user chooses to start or exit. If started, 
+the user can keep entering numbers (0–90), 
+and the program keeps adding them until a certain condition is met. 
+At the end, it tells the user how well they did based on the total score.
+
+*/
+
 import java.util.Scanner;
 
 public class numberGame {
